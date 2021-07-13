@@ -130,6 +130,13 @@ module dut_unit_test;
       static logic       select = 1;
       `FAIL_UNLESS_EQUAL(select ? data_a : data_b, data_a);
     `SVTEST_END
+
+    // verify WARNING macro
+    `SVTEST(warning_print_test)
+      `WARNING("simple warning");
+    `SVTEST_END
+
+
   `SVUNIT_TESTS_END
 
 
